@@ -1,0 +1,17 @@
+[build-system]
+requires = ["setuptools>=61"]
+build-backend = "setuptools.build_meta"
+
+[project]
+name = "eva"
+version = "0.1.0"
+description = "Empirical variational autoencoder"
+requires-python = ">=3.10"
+dependencies = ["jax", "numpy", "optax", "pytest"]
+
+[tool.setuptools.packages.find]
+where = ["src"]
+
+[tool.pytest.ini_options]
+pythonpath = ["src"]
+testpaths = ["tests"]
